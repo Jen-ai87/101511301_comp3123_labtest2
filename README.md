@@ -81,6 +81,29 @@ Import the `Weather_API_Postman_Collection.json` file into Postman to test:
 - React documentation and community
 - COMP3123 course materials provided by professor Pritesh
 
+## 🌐 Deploying to Vercel
+
+## Using Vercel CLI
+
+1. **Install Vercel CLI**
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Login to Vercel**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy**
+   ```bash
+   vercel
+   ```
+   - Follow the prompts
+   - Select your project settings
+   - Vercel will provide a deployment URL
+
 **Note**: Remember to replace `YOUR_API_KEY_HERE` in `App.js` with your actual OpenWeatherMap API key before running the application.
+
 
 ![Weather App Screenshot](weather-app.png)
