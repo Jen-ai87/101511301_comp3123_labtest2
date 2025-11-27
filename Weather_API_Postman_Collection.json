@@ -1,0 +1,344 @@
+{
+  "info": {
+    "name": "Weather App API - OpenWeatherMap",
+    "description": "Collection of API endpoints for testing OpenWeatherMap API used in the Weather App (COMP3123 Lab Test 2)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "api_key",
+      "value": "YOUR_API_KEY_HERE",
+      "type": "string"
+    },
+    {
+      "key": "base_url",
+      "value": "https://api.openweathermap.org/data/2.5",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Current Weather",
+      "item": [
+        {
+          "name": "Get Weather by City Name - Toronto",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=Toronto&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Toronto",
+                  "description": "City name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement (metric, imperial, standard)"
+                }
+              ]
+            },
+            "description": "Get current weather for Toronto in metric units (Celsius)"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Weather by City Name - New York",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=New York&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "New York",
+                  "description": "City name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Get current weather for New York"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Weather by City Name - London",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=London&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "London",
+                  "description": "City name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Get current weather for London"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Weather by City and Country Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=Toronto,CA&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Toronto,CA",
+                  "description": "City name with country code (ISO 3166)"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Get weather using city name with country code for more precise results"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Weather - Imperial Units",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=Toronto&appid={{api_key}}&units=imperial",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Toronto",
+                  "description": "City name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "imperial",
+                  "description": "Imperial units (Fahrenheit)"
+                }
+              ]
+            },
+            "description": "Get weather in imperial units (Fahrenheit, miles)"
+          },
+          "response": []
+        }
+      ],
+      "description": "Current weather data API endpoints"
+    },
+    {
+      "name": "5-Day Forecast",
+      "item": [
+        {
+          "name": "Get 5-Day Forecast - Toronto",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/forecast?q=Toronto&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["forecast"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Toronto",
+                  "description": "City name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Get 5-day weather forecast with 3-hour intervals for Toronto"
+          },
+          "response": []
+        },
+        {
+          "name": "Get 5-Day Forecast - New York",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/forecast?q=New York&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["forecast"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "New York",
+                  "description": "City name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Get 5-day forecast for New York"
+          },
+          "response": []
+        },
+        {
+          "name": "Get 5-Day Forecast with Country Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/forecast?q=Toronto,CA&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["forecast"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Toronto,CA",
+                  "description": "City name with country code"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Get forecast with city and country code"
+          },
+          "response": []
+        }
+      ],
+      "description": "5-day weather forecast API endpoints"
+    },
+    {
+      "name": "Error Scenarios",
+      "item": [
+        {
+          "name": "Invalid City Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=InvalidCityXYZ123&appid={{api_key}}&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "InvalidCityXYZ123",
+                  "description": "Invalid city name"
+                },
+                {
+                  "key": "appid",
+                  "value": "{{api_key}}",
+                  "description": "Your API key"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Test error handling for invalid city name (should return 404)"
+          },
+          "response": []
+        },
+        {
+          "name": "Missing API Key",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/weather?q=Toronto&units=metric",
+              "host": ["{{base_url}}"],
+              "path": ["weather"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Toronto",
+                  "description": "City name"
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement"
+                }
+              ]
+            },
+            "description": "Test error handling when API key is missing (should return 401)"
+          },
+          "response": []
+        }
+      ],
+      "description": "Test error scenarios and edge cases"
+    }
+  ]
+}
