@@ -83,4 +83,4 @@ Import the `Weather_API_Postman_Collection.json` file into Postman to test:
 
 **Note**: Remember to replace `YOUR_API_KEY_HERE` in `App.js` with your actual OpenWeatherMap API key before running the application.
 
-![Weather App Screenshot](screenshot-weather-app.png)
+![Weather App Screenshot](weather-app.png)
